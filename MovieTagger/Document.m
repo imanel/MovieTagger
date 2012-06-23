@@ -111,18 +111,31 @@
 }
 
 - (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
-    return [searchResults count];
+    if([[tableView identifier] isEqual:@"search table"]) {
+        return [searchResults count];
+    } else {
+        return [movieActorsList count];
+    }
 }
 
 - (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)col row:(NSInteger)rowIndex {
-    MoviePreview *mp = [searchResults objectAtIndex:rowIndex];
     NSString *rv;
-    if([[col identifier] isEqual:@"title"]) {
-        rv = [mp title];
-    } else if([[col identifier] isEqual:@"year"]) {
-        rv = [mp year];
+    if([[aTableView identifier] isEqual:@"search table"]) {
+        MoviePreview *mp = [searchResults objectAtIndex:rowIndex];
+        if([[col identifier] isEqual:@"title"]) {
+            rv = [mp title];
+        } else if([[col identifier] isEqual:@"year"]) {
+            rv = [mp year];
+        } else {
+            rv = @"see \u25B8";
+        }
     } else {
-        rv = @"see \u25B8";
+        MovieActor *ma = [movieActorsList objectAtIndex:rowIndex];
+        if([[col identifier] isEqual:@"actor"]) {
+            rv = [ma name];
+        } else {
+            rv = [ma role];
+        }
     }
     return rv;
 }
@@ -142,9 +155,25 @@
         MoviePreview *mp = [searchResults objectAtIndex:[searchResultsTable selectedRow]];
         movie = [[Movie alloc] initWithExternalID:[mp externalID] source:[mp source]];
         [self setCurrentView:movieView];
+        [self showMovie];
     } else {
         NSRunInformationalAlertPanel(@"MovieTagger", @"Please select movie first", @"OK", nil, nil);
     }
+}
+
+- (void)showMovie {
+    [movieTitle setStringValue:[movie title]];
+    [movieGenres setStringValue:[movie genres]];
+    [movieDirectors setStringValue:[movie directors]];
+    [movieWriters setStringValue:[movie writers]];
+    [movieOverview setStringValue:[movie overview]];
+    [movieReleased setStringValue:[movie released]];
+    [movieRuntime setStringValue:[movie runtime]];
+    [movieRating setStringValue:[movie rating]];
+    movieActorsList = [movie actors];
+    [movieActors reloadData];
+    NSImage *poster = [[NSImage alloc] initWithContentsOfURL:[movie poster]];
+    [moviePoster setImage:poster];
 }
 
 - (IBAction)cancelSelection:(id)sender {

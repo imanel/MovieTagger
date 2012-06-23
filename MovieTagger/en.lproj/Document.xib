@@ -164,6 +164,7 @@
 							<string key="NSFrame">{{384, 12}, {82, 32}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
+							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="663049064">
@@ -228,7 +229,7 @@
 											<string key="NSFrameSize">{438, 162}</string>
 											<reference key="NSSuperview" ref="320285452"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="247740742"/>
+											<reference key="NSNextKeyView" ref="807106142"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="156755894">
@@ -441,7 +442,7 @@
 							<string key="NSFrame">{{20, 60}, {440, 180}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="320285452"/>
+							<reference key="NSNextKeyView" ref="247740742"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="807106142"/>
@@ -674,7 +675,7 @@
 										<string key="NSFrameSize">{213, 109}</string>
 										<reference key="NSSuperview" ref="11954443"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="639266518"/>
+										<reference key="NSNextKeyView" ref="611966177"/>
 										<string key="NSReuseIdentifierKey">_NS:13</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSTableHeaderView" key="NSHeaderView" id="956770466">
@@ -823,7 +824,7 @@
 						<string key="NSFrame">{{20, 59}, {215, 127}}</string>
 						<reference key="NSSuperview" ref="301758586"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="11954443"/>
+						<reference key="NSNextKeyView" ref="639266518"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="NSsFlags">133682</int>
 						<reference key="NSVScroller" ref="331658976"/>
@@ -1012,6 +1013,7 @@
 						<string key="NSFrame">{{327, 11}, {69, 32}}</string>
 						<reference key="NSSuperview" ref="301758586"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="92999974">
@@ -1255,6 +1257,14 @@
 						<reference key="destination" ref="512844837"/>
 					</object>
 					<int key="connectionID">100244</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">dataSource</string>
+						<reference key="source" ref="266567503"/>
+						<reference key="destination" ref="512844837"/>
+					</object>
+					<int key="connectionID">100985</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1611,6 +1621,7 @@
 							<reference ref="937727491"/>
 						</array>
 						<reference key="parent" ref="441249799"/>
+						<string key="objectName">Search Results Table</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100203</int>
@@ -2782,7 +2793,6 @@
 							<reference ref="331658976"/>
 						</array>
 						<reference key="parent" ref="301758586"/>
-						<string key="objectName">Actors Table</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100342</int>
@@ -2807,6 +2817,7 @@
 							<reference ref="721556083"/>
 						</array>
 						<reference key="parent" ref="159793413"/>
+						<string key="objectName">Actors Table</string>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">100344</int>
@@ -3369,6 +3380,7 @@
 				<boolean value="NO" key="100201.IBNSViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="100201.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100202.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100202.userInterfaceItemIdentifier">search table</string>
 				<string key="100203.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100204.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100205.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3483,6 +3495,7 @@
 				<boolean value="NO" key="100338.IBNSViewMetadataTranslatesAutoresizingMaskIntoConstraints"/>
 				<string key="100338.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100339.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
+				<string key="100339.userInterfaceItemIdentifier">actors</string>
 				<string key="100340.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100341.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
 				<string key="100342.IBPluginDependency">com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -3624,7 +3637,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100984</int>
+			<int key="maxID">100985</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">

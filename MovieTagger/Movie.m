@@ -16,8 +16,27 @@
     if(self = [super init]) {
         externalID = eID;
         source = s;
+        title = genres = directors = writers = overview = released = runtime = rating = @"";
     }
     return self;
 }
+
+@end
+
+
+
+// Movie Actor implementation
+@implementation MovieActor
+
+@synthesize name, role;
+
+- (id)initWithName:(NSString *)n role:(NSString *)r {
+    if(self = [super init]) {
+        name = n;
+        role = r;
+    }
+    return self;
+}
+
 
 @end

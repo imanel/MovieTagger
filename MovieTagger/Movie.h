@@ -19,7 +19,7 @@
     NSString *released;
     NSString *runtime;
     NSString *rating;
-    NSArray *actors;
+    NSMutableArray *actors;
     NSURL *poster;
 }
 
@@ -28,5 +28,19 @@
 @property NSURL *poster;
 
 - (id)initWithExternalID:(NSString *)eID source:(NSString *)s;
+
+@end
+
+
+
+// Movie Actor interface
+@interface MovieActor : NSObject {
+    NSString *name;
+    NSString *role;
+}
+
+@property NSString *name, *role;
+
+- (id)initWithName:(NSString *)n role:(NSString *)r;
 
 @end

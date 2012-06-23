@@ -32,6 +32,7 @@
     IBOutlet NSTextField *movieRating;
     IBOutlet NSImageView *moviePoster;
     IBOutlet NSTableView *movieActors;
+    NSArray *movieActorsList;
     Movie *movie;
 }
 
