@@ -188,4 +188,10 @@
     return YES;
 }
 
+- (void)saveToURL:(NSURL *)url ofType:(NSString *)typeName forSaveOperation:(NSSaveOperationType)saveOperation completionHandler:(void (^)(NSError *errorOrNil))completionHandler {
+    [super saveToURL:url ofType:typeName forSaveOperation:saveOperation completionHandler:completionHandler];
+    [self close];
+    NSRunInformationalAlertPanel(@"MovieTagger", @"Information saved", @"OK", nil, nil);
+}
+
 @end
