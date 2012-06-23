@@ -307,7 +307,7 @@
 													</object>
 													<object class="NSTextFieldCell" key="NSDataCell" id="178154530">
 														<int key="NSCellFlags">337772096</int>
-														<int key="NSCellFlags2">2048</int>
+														<int key="NSCellFlags2">134219776</int>
 														<string key="NSContents">Text Cell</string>
 														<reference key="NSSupport" ref="1071193415"/>
 														<reference key="NSControlView" ref="28230151"/>
@@ -518,6 +518,14 @@
 						<reference key="destination" ref="364038446"/>
 					</object>
 					<int key="connectionID">100246</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">tableClicked:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="28230151"/>
+					</object>
+					<int key="connectionID">100248</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -1086,24 +1094,27 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100246</int>
+			<int key="maxID">100248</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">Document</string>
 					<string key="superclassName">NSDocument</string>
-					<object class="NSMutableDictionary" key="actions">
-						<string key="NS.key.0">performSearch:</string>
-						<string key="NS.object.0">id</string>
-					</object>
-					<object class="NSMutableDictionary" key="actionInfosByName">
-						<string key="NS.key.0">performSearch:</string>
-						<object class="IBActionInfo" key="NS.object.0">
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="performSearch:">id</string>
+						<string key="tableClicked:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="performSearch:">
 							<string key="name">performSearch:</string>
 							<string key="candidateClassName">id</string>
 						</object>
-					</object>
+						<object class="IBActionInfo" key="tableClicked:">
+							<string key="name">tableClicked:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="searchField">NSSearchField</string>
 						<string key="searchResultsTable">NSTableView</string>

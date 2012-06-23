@@ -129,4 +129,14 @@
     return rv;
 }
 
+- (IBAction)tableClicked:(id)sender {
+    int column = [sender clickedColumn];
+    if(column == 2) {
+        int row = [sender clickedRow];
+        MoviePreview *mp = [searchResults objectAtIndex:row];
+        if(mp)
+            [[NSWorkspace sharedWorkspace] openURL:[NSURL URLWithString:[mp url]]];
+    }
+}
+
 @end

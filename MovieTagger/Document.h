@@ -21,5 +21,6 @@
 }
 
 - (IBAction)performSearch:(id)sender;
+- (IBAction)tableClicked:(id)sender;
 
 @end

@@ -15,15 +15,15 @@
     [result addObject:[[self alloc] initWithExternalID:@"12"
                                                  title:@"test 1"
                                                   year:@"1999"
-                                                source:@"imdb"]];
+                                                source:s]];
     [result addObject:[[self alloc] initWithExternalID:@"13"
                                                  title:@"test 2"
                                                   year:@"2000"
-                                                source:@"imdb"]];
+                                                source:s]];
     [result addObject:[[self alloc] initWithExternalID:@"14"
                                                  title:@"test 3"
                                                   year:@"2001"
-                                                source:@"imdb"]];
+                                                source:s]];
     return result;
 }
 
