@@ -40,11 +40,7 @@
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
-    // Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
-    // You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-    NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];
-    @throw exception;
-    return nil;
+    return [[movie toXML] dataUsingEncoding:NSUTF8StringEncoding];
 }
 
 - (BOOL)isEntireFileLoaded {
@@ -181,21 +177,15 @@
     [self setCurrentView:searchView];
 }
 
-- (IBAction)saveDocumentAs:(id)sender {
-    NSSavePanel *panel = [NSSavePanel savePanel];
-    [panel setExtensionHidden:NO];
-    [panel setDirectoryURL:[self documentDirectory]];
+- (BOOL)prepareSavePanel:(NSSavePanel *)savePanel {
+    [savePanel setExtensionHidden:NO];
+    [savePanel setDirectoryURL:[self documentDirectory]];
     if([[movie source] isEqual:@"imdb"])
-        [panel setNameFieldStringValue:@"movie"];
+        [savePanel setNameFieldStringValue:@"movie"];
     else
-        [panel setNameFieldStringValue:@"tvshow"];
-    [panel setAllowedFileTypes:[[NSArray alloc] initWithObjects:@"nfo", nil]];
-    if([panel runModal]== NSFileHandlingPanelOKButton) {
-        NSURL *saveURL = [panel URL];
-        if(saveURL) {
-            NSLog(@"%@", [saveURL absoluteString]);
-        }
-    }
+        [savePanel setNameFieldStringValue:@"tvshow"];
+    [savePanel setAllowedFileTypes:[[NSArray alloc] initWithObjects:@"nfo", nil]];
+    return YES;
 }
 
 @end

@@ -30,6 +30,7 @@
 - (id)initWithExternalID:(NSString *)eID source:(NSString *)s;
 
 - (void)loadData;
+- (NSString *)toXML;
 
 @end
 
