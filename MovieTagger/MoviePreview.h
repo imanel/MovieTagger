@@ -15,14 +15,12 @@
     NSString *source;
 }
 
+@property NSString *externalID, *title, *year, *source;
+
 + (NSArray *)findByTitle:(NSString *)t source:(NSString *)s;
 
 - (id)initWithExternalID:(NSString *)eID title:(NSString *)t year:(NSString *)y source:(NSString *)s;
 
-- (NSString *)externalID;
-- (NSString *)title;
-- (NSString *)year;
-- (NSString *)source;
 - (NSString *)url;
 
 @end

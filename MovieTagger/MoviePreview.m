@@ -10,6 +10,8 @@
 
 @implementation MoviePreview
 
+@synthesize externalID, title, year, source;
+
 + (NSArray *)findByTitle:(NSString *)t source:(NSString *)s {
     NSMutableArray *result = [[NSMutableArray alloc] init];
     [result addObject:[[self alloc] initWithExternalID:@"12"
@@ -35,22 +37,6 @@
         source = s;
     }
     return self;
-}
-
-- (NSString *)externalID {
-    return externalID;
-}
-
-- (NSString *)title {
-    return title;
-}
-
-- (NSString *)year {
-    return year;
-}
-
-- (NSString *)source {
-    return source;
 }
 
 - (NSString *)url {

@@ -11,8 +11,11 @@
 
 @implementation Document
 
-- (id)init
-{
++ (BOOL)autosavesInPlace {
+    return NO;
+}
+
+- (id)init {
     self = [super init];
     if (self) {
         NSError *regexpError = NULL;
@@ -26,27 +29,17 @@
     return self;
 }
 
-- (NSString *)windowNibName
-{
-    // Override returning the nib file name of the document
-    // If you need to use a subclass of NSWindowController or if your document supports multiple NSWindowControllers, you should remove this method and override -makeWindowControllers instead.
+- (NSString *)windowNibName {
     return @"Document";
 }
 
-- (void)windowControllerDidLoadNib:(NSWindowController *)aController
-{
+- (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
     [searchField setStringValue:[self guessName]];
     [self performSearch:NULL];
 }
 
-+ (BOOL)autosavesInPlace
-{
-    return NO;
-}
-
-- (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError
-{
+- (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
     // Insert code here to write your document to data of the specified type. If outError != NULL, ensure that you create and set an appropriate error when returning nil.
     // You can also choose to override -fileWrapperOfType:error:, -writeToURL:ofType:error:, or -writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
     NSException *exception = [NSException exceptionWithName:@"UnimplementedMethod" reason:[NSString stringWithFormat:@"%@ is unimplemented", NSStringFromSelector(_cmd)] userInfo:nil];

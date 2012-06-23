@@ -23,12 +23,10 @@
     NSURL *poster;
 }
 
-- (id)initWithExternalID:(NSString *)eID source:(NSString *)s;
-
 @property NSString *externalID, *source, *title, *genres, *directors, *writers, *overview, *released, *runtime, *rating;
 @property NSArray *actors;
 @property NSURL *poster;
 
-
+- (id)initWithExternalID:(NSString *)eID source:(NSString *)s;
 
 @end
