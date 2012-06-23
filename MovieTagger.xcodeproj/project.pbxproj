@@ -10,7 +10,6 @@
 		592E5A331595D6FB002FFF5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 592E5A321595D6FB002FFF5C /* Cocoa.framework */; };
 		592E5A3D1595D6FB002FFF5C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 592E5A3B1595D6FB002FFF5C /* InfoPlist.strings */; };
 		592E5A3F1595D6FB002FFF5C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 592E5A3E1595D6FB002FFF5C /* main.m */; };
-		592E5A431595D6FB002FFF5C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 592E5A411595D6FB002FFF5C /* Credits.rtf */; };
 		592E5A461595D6FB002FFF5C /* Document.m in Sources */ = {isa = PBXBuildFile; fileRef = 592E5A451595D6FB002FFF5C /* Document.m */; };
 		592E5A491595D6FB002FFF5C /* Document.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592E5A471595D6FB002FFF5C /* Document.xib */; };
 		592E5A4C1595D6FB002FFF5C /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 592E5A4A1595D6FB002FFF5C /* MainMenu.xib */; };
@@ -22,12 +21,11 @@
 		592E5A351595D6FB002FFF5C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		592E5A361595D6FB002FFF5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		592E5A371595D6FB002FFF5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		592E5A3A1595D6FB002FFF5C /* MovieTagger-Info.plist */ = {isa = PBXFileReference; path = "MovieTagger-Info.plist"; sourceTree = "<group>"; };
+		592E5A3A1595D6FB002FFF5C /* MovieTagger-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MovieTagger-Info.plist"; sourceTree = "<group>"; };
 		592E5A3C1595D6FB002FFF5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		592E5A3E1595D6FB002FFF5C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		592E5A401595D6FB002FFF5C /* MovieTagger-Prefix.pch */ = {isa = PBXFileReference; path = "MovieTagger-Prefix.pch"; sourceTree = "<group>"; };
-		592E5A421595D6FB002FFF5C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
-		592E5A441595D6FB002FFF5C /* Document.h */ = {isa = PBXFileReference; path = Document.h; sourceTree = "<group>"; };
+		592E5A401595D6FB002FFF5C /* MovieTagger-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieTagger-Prefix.pch"; sourceTree = "<group>"; };
+		592E5A441595D6FB002FFF5C /* Document.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Document.h; sourceTree = "<group>"; };
 		592E5A451595D6FB002FFF5C /* Document.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Document.m; sourceTree = "<group>"; };
 		592E5A481595D6FB002FFF5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/Document.xib; sourceTree = "<group>"; };
 		592E5A4B1595D6FB002FFF5C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 				592E5A3B1595D6FB002FFF5C /* InfoPlist.strings */,
 				592E5A3E1595D6FB002FFF5C /* main.m */,
 				592E5A401595D6FB002FFF5C /* MovieTagger-Prefix.pch */,
-				592E5A411595D6FB002FFF5C /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -157,7 +154,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				592E5A3D1595D6FB002FFF5C /* InfoPlist.strings in Resources */,
-				592E5A431595D6FB002FFF5C /* Credits.rtf in Resources */,
 				592E5A491595D6FB002FFF5C /* Document.xib in Resources */,
 				592E5A4C1595D6FB002FFF5C /* MainMenu.xib in Resources */,
 			);
@@ -184,14 +180,6 @@
 				592E5A3C1595D6FB002FFF5C /* en */,
 			);
 			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		592E5A411595D6FB002FFF5C /* Credits.rtf */ = {
-			isa = PBXVariantGroup;
-			children = (
-				592E5A421595D6FB002FFF5C /* en */,
-			);
-			name = Credits.rtf;
 			sourceTree = "<group>";
 		};
 		592E5A471595D6FB002FFF5C /* Document.xib */ = {
