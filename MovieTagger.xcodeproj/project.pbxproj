@@ -82,11 +82,10 @@
 		592E5A381595D6FB002FFF5C /* MovieTagger */ = {
 			isa = PBXGroup;
 			children = (
-				592E5A441595D6FB002FFF5C /* Document.h */,
-				592E5A451595D6FB002FFF5C /* Document.m */,
-				592E5A471595D6FB002FFF5C /* Document.xib */,
-				592E5A4A1595D6FB002FFF5C /* MainMenu.xib */,
+				592E5A561595F8D8002FFF5C /* Controller */,
+				592E5A581595F91C002FFF5C /* Model */,
 				592E5A391595D6FB002FFF5C /* Supporting Files */,
+				592E5A571595F8E7002FFF5C /* View */,
 			);
 			path = MovieTagger;
 			sourceTree = "<group>";
@@ -100,6 +99,31 @@
 				592E5A401595D6FB002FFF5C /* MovieTagger-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		592E5A561595F8D8002FFF5C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				592E5A441595D6FB002FFF5C /* Document.h */,
+				592E5A451595D6FB002FFF5C /* Document.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		592E5A571595F8E7002FFF5C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				592E5A471595D6FB002FFF5C /* Document.xib */,
+				592E5A4A1595D6FB002FFF5C /* MainMenu.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		592E5A581595F91C002FFF5C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
