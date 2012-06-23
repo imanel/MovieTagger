@@ -17,8 +17,23 @@
         externalID = eID;
         source = s;
         title = genres = directors = writers = overview = released = runtime = rating = @"";
+        actors = [[NSMutableArray alloc] init];
     }
     return self;
+}
+
+- (void)loadData {
+    title = @"Batman";
+    genres = @"Crime, Fantasy, Thriller";
+    directors = @"Tim Burton";
+    writers = @"Bob Kane, Sam Hamm";
+    overview = @"The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.";
+    released = @"1989-06-23";
+    runtime = @"126";
+    rating = @"7.6";
+    [actors addObject:[[MovieActor alloc] initWithName:@"Michael Keaton" role:@"Batman/Bruce Wayne"]];
+    [actors addObject:[[MovieActor alloc] initWithName:@"Jack Nicholson" role:@"Joker/Jack Napier"]];
+    poster = [[NSURL alloc] initWithString:@"http://ia.media-imdb.com/images/M/MV5BMjExNjMzMTUxNV5BMl5BanBnXkFtZTYwNzQyMTg4._V1_.jpg"];
 }
 
 @end

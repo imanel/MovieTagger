@@ -155,6 +155,7 @@
         MoviePreview *mp = [searchResults objectAtIndex:[searchResultsTable selectedRow]];
         movie = [[Movie alloc] initWithExternalID:[mp externalID] source:[mp source]];
         [self setCurrentView:movieView];
+        [movie loadData];
         [self showMovie];
     } else {
         NSRunInformationalAlertPanel(@"MovieTagger", @"Please select movie first", @"OK", nil, nil);
