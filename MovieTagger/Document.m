@@ -37,6 +37,7 @@
 {
     [super windowControllerDidLoadNib:aController];
     [searchField setStringValue:[self guessName]];
+    [self performSearch:NULL];
 }
 
 + (BOOL)autosavesInPlace
@@ -107,7 +108,7 @@
 
 - (IBAction)performSearch:(id)sender {
     NSString *backend = [self backendName];
-    searchResults = [MoviePreview findByTitle:[sender stringValue] source:backend];
+    searchResults = [MoviePreview findByTitle:[searchField stringValue] source:backend];
     [searchResultsTable reloadData];
 }
 
