@@ -181,4 +181,21 @@
     [self setCurrentView:searchView];
 }
 
+- (IBAction)saveDocumentAs:(id)sender {
+    NSSavePanel *panel = [NSSavePanel savePanel];
+    [panel setExtensionHidden:NO];
+    [panel setDirectoryURL:[self documentDirectory]];
+    if([[movie source] isEqual:@"imdb"])
+        [panel setNameFieldStringValue:@"movie"];
+    else
+        [panel setNameFieldStringValue:@"tvshow"];
+    [panel setAllowedFileTypes:[[NSArray alloc] initWithObjects:@"nfo", nil]];
+    if([panel runModal]== NSFileHandlingPanelOKButton) {
+        NSURL *saveURL = [panel URL];
+        if(saveURL) {
+            NSLog(@"%@", [saveURL absoluteString]);
+        }
+    }
+}
+
 @end
