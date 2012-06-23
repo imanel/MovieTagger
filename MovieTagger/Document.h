@@ -9,7 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface Document : NSDocument {
-    IBOutlet NSView *listView;
+    NSRegularExpression *regexpClearCharacters;
+    NSRegularExpression *regexpClearWhitespaces;
+    
+    // Search View
+    IBOutlet NSView *searchView;
+    IBOutlet NSSearchField *searchField;
+    IBOutlet NSSegmentedControl *searchType;
+    IBOutlet NSTableView *searchResultsTable;
 }
 
 @end

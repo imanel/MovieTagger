@@ -14,7 +14,13 @@
 {
     self = [super init];
     if (self) {
-        // Add your subclass-specific initialization here.
+        NSError *regexpError = NULL;
+        regexpClearCharacters = [NSRegularExpression regularExpressionWithPattern:@"\\.\\w{1,4}$|[\\,\\.\\-\\_\\[\\]\\(\\)]"
+                                                                          options:NSRegularExpressionCaseInsensitive
+                                                                            error:&regexpError];
+        regexpClearWhitespaces = [NSRegularExpression regularExpressionWithPattern:@"\\ \\ "
+                                                                           options:NSRegularExpressionCaseInsensitive
+                                                                             error:&regexpError];
     }
     return self;
 }
@@ -29,7 +35,7 @@
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController
 {
     [super windowControllerDidLoadNib:aController];
-    // Add any code here that needs to be executed once the windowController has loaded the document's window.
+    [searchField setStringValue:[self guessName]];
 }
 
 + (BOOL)autosavesInPlace
@@ -68,6 +74,23 @@
     
     [mainWindow setContentView:view];
     [mainWindow setFrame:frame display:YES animate:YES];
+}
+
+- (NSString *)guessName {
+    NSString *result = [[self fileURL] lastPathComponent];
+    // Replace extenstion and unnecessary characters with spaces
+    result = [regexpClearCharacters stringByReplacingMatchesInString:result
+                                                             options:0
+                                                               range:NSMakeRange(0, [result length])
+                                                        withTemplate:@" "];
+    // Strip duplicate spaces
+    result = [regexpClearWhitespaces stringByReplacingMatchesInString:result
+                                                              options:0
+                                                                range:NSMakeRange(0, [result length])
+                                                         withTemplate:@" "];
+    // Strip trailing spaces
+    result = [result stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+    return result;
 }
 
 @end
