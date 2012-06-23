@@ -22,6 +22,16 @@
     
     // Movie View
     IBOutlet NSView *movieView;
+    IBOutlet NSTextField *movieTitle;
+    IBOutlet NSTextField *movieGenres;
+    IBOutlet NSTextField *movieDirectors;
+    IBOutlet NSTextField *movieWriters;
+    IBOutlet NSTextField *movieOverview;
+    IBOutlet NSTextField *movieReleased;
+    IBOutlet NSTextField *movieRuntime;
+    IBOutlet NSTextField *movieRating;
+    IBOutlet NSImageView *moviePoster;
+    IBOutlet NSTableView *movieActors;
     Movie *movie;
 }
 

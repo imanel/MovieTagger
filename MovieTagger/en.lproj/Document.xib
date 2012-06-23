@@ -164,7 +164,6 @@
 							<string key="NSFrame">{{384, 12}, {82, 32}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<bool key="NSEnabled">YES</bool>
 							<object class="NSButtonCell" key="NSCell" id="663049064">
@@ -229,7 +228,7 @@
 											<string key="NSFrameSize">{438, 162}</string>
 											<reference key="NSSuperview" ref="320285452"/>
 											<reference key="NSWindow"/>
-											<reference key="NSNextKeyView" ref="807106142"/>
+											<reference key="NSNextKeyView" ref="247740742"/>
 											<string key="NSReuseIdentifierKey">_NS:13</string>
 											<bool key="NSEnabled">YES</bool>
 											<object class="NSTableHeaderView" key="NSHeaderView" id="156755894">
@@ -442,7 +441,7 @@
 							<string key="NSFrame">{{20, 60}, {440, 180}}</string>
 							<reference key="NSSuperview" ref="568628114"/>
 							<reference key="NSWindow"/>
-							<reference key="NSNextKeyView" ref="247740742"/>
+							<reference key="NSNextKeyView" ref="320285452"/>
 							<string key="NSReuseIdentifierKey">_NS:9</string>
 							<int key="NSsFlags">133682</int>
 							<reference key="NSVScroller" ref="807106142"/>
@@ -675,7 +674,7 @@
 										<string key="NSFrameSize">{213, 109}</string>
 										<reference key="NSSuperview" ref="11954443"/>
 										<reference key="NSWindow"/>
-										<reference key="NSNextKeyView" ref="611966177"/>
+										<reference key="NSNextKeyView" ref="639266518"/>
 										<string key="NSReuseIdentifierKey">_NS:13</string>
 										<bool key="NSEnabled">YES</bool>
 										<object class="NSTableHeaderView" key="NSHeaderView" id="956770466">
@@ -824,7 +823,7 @@
 						<string key="NSFrame">{{20, 59}, {215, 127}}</string>
 						<reference key="NSSuperview" ref="301758586"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="639266518"/>
+						<reference key="NSNextKeyView" ref="11954443"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<int key="NSsFlags">133682</int>
 						<reference key="NSVScroller" ref="331658976"/>
@@ -1013,7 +1012,6 @@
 						<string key="NSFrame">{{327, 11}, {69, 32}}</string>
 						<reference key="NSSuperview" ref="301758586"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView"/>
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSButtonCell" key="NSCell" id="92999974">
@@ -1153,6 +1151,86 @@
 						<reference key="destination" ref="938157397"/>
 					</object>
 					<int key="connectionID">100261</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieActors</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="266567503"/>
+					</object>
+					<int key="connectionID">100975</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieDirectors</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="112031782"/>
+					</object>
+					<int key="connectionID">100976</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieGenres</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="82167614"/>
+					</object>
+					<int key="connectionID">100977</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieOverview</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="418252681"/>
+					</object>
+					<int key="connectionID">100978</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">moviePoster</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="115333463"/>
+					</object>
+					<int key="connectionID">100979</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieRating</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="340602906"/>
+					</object>
+					<int key="connectionID">100980</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieReleased</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="71046084"/>
+					</object>
+					<int key="connectionID">100981</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieRuntime</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="1030982463"/>
+					</object>
+					<int key="connectionID">100982</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieTitle</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="830062953"/>
+					</object>
+					<int key="connectionID">100983</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">movieWriters</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="2137731"/>
+					</object>
+					<int key="connectionID">100984</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
@@ -3546,7 +3624,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100974</int>
+			<int key="maxID">100984</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -3578,16 +3656,66 @@
 						</object>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="movieActors">NSTableView</string>
+						<string key="movieDirectors">NSTextField</string>
+						<string key="movieGenres">NSTextField</string>
+						<string key="movieOverview">NSTextField</string>
+						<string key="moviePoster">NSImageView</string>
+						<string key="movieRating">NSTextField</string>
+						<string key="movieReleased">NSTextField</string>
+						<string key="movieRuntime">NSTextField</string>
+						<string key="movieTitle">NSTextField</string>
 						<string key="movieView">NSView</string>
+						<string key="movieWriters">NSTextField</string>
 						<string key="searchField">NSSearchField</string>
 						<string key="searchResultsTable">NSTableView</string>
 						<string key="searchType">NSSegmentedControl</string>
 						<string key="searchView">NSView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="movieActors">
+							<string key="name">movieActors</string>
+							<string key="candidateClassName">NSTableView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieDirectors">
+							<string key="name">movieDirectors</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieGenres">
+							<string key="name">movieGenres</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieOverview">
+							<string key="name">movieOverview</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="moviePoster">
+							<string key="name">moviePoster</string>
+							<string key="candidateClassName">NSImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieRating">
+							<string key="name">movieRating</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieReleased">
+							<string key="name">movieReleased</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieRuntime">
+							<string key="name">movieRuntime</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieTitle">
+							<string key="name">movieTitle</string>
+							<string key="candidateClassName">NSTextField</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="movieView">
 							<string key="name">movieView</string>
 							<string key="candidateClassName">NSView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="movieWriters">
+							<string key="name">movieWriters</string>
+							<string key="candidateClassName">NSTextField</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="searchField">
 							<string key="name">searchField</string>
