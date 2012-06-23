@@ -8,6 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Document : NSDocument
+@interface Document : NSDocument {
+    IBOutlet NSView *listView;
+}
 
 @end

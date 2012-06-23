@@ -58,4 +58,16 @@
     return [[self fileURL] URLByDeletingLastPathComponent];
 }
 
+- (void)setCurrentView:(NSView *)view {
+    NSWindow *mainWindow = [[[self windowControllers] objectAtIndex:0] window];
+    
+    NSRect frame = [view frame];
+    frame.origin = [[view superview] convertPoint:frame.origin toView:[mainWindow contentView]];
+    frame.origin.y += frame.size.height;
+    frame.origin = [mainWindow convertBaseToScreen:frame.origin];
+    
+    [mainWindow setContentView:view];
+    [mainWindow setFrame:frame display:YES animate:YES];
+}
+
 @end
