@@ -1,0 +1,7 @@
+//
+// Prefix header for all source files of the 'MovieTagger' target in the 'MovieTagger' project
+//
+
+#ifdef __OBJC__
+    #import <Cocoa/Cocoa.h>
+#endif
