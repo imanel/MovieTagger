@@ -71,7 +71,7 @@
     
     NSRect frame = [view frame];
     frame.origin = [[view superview] convertPoint:frame.origin toView:[mainWindow contentView]];
-    frame.origin.y += frame.size.height;
+    frame.origin.y += ([[[mainWindow contentView] superview] frame].size.height - [view frame].size.height);
     frame.origin = [mainWindow convertBaseToScreen:frame.origin];
     
     [mainWindow setContentView:view];
@@ -143,9 +143,14 @@
     if([searchResultsTable selectedRow] >= 0) {
         MoviePreview *mp = [searchResults objectAtIndex:[searchResultsTable selectedRow]];
         movie = [[Movie alloc] initWithExternalID:[mp externalID] source:[mp source]];
+        [self setCurrentView:movieView];
     } else {
         NSRunInformationalAlertPanel(@"MovieTagger", @"Please select movie first", @"OK", nil, nil);
     }
+}
+
+- (IBAction)cancelSelection:(id)sender {
+    [self setCurrentView:searchView];
 }
 
 @end

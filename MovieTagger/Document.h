@@ -21,11 +21,16 @@
     NSArray *searchResults;
     
     // Movie View
+    IBOutlet NSView *movieView;
     Movie *movie;
 }
 
+// Search View
 - (IBAction)performSearch:(id)sender;
 - (IBAction)tableClicked:(id)sender;
 - (IBAction)selectMovie:(id)sender;
+
+// Movie View
+- (IBAction)cancelSelection:(id)sender;
 
 @end
