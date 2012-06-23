@@ -76,7 +76,8 @@
     
     NSRect frame = [mainWindow frame];
     frame.size = newSize;
-    frame.origin.y -= (newSize.height - oldSize.height);
+    frame.origin.y -= (newSize.height - oldSize.height) / 2;
+    frame.origin.x -= (newSize.width - oldSize.width) / 2;
     
     [mainWindow setContentView:view];
     [mainWindow setFrame:frame display:YES animate:YES];
