@@ -93,4 +93,15 @@
     return result;
 }
 
+- (NSString *)backendName {
+    switch([searchType selectedSegment]) {
+        case 0: default:
+            return @"imdb";
+            break;
+        case 1:
+            return @"tvdb";
+            break;
+    }
+}
+
 @end
