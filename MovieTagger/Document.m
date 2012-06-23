@@ -69,10 +69,14 @@
 - (void)setCurrentView:(NSView *)view {
     NSWindow *mainWindow = [[[self windowControllers] objectAtIndex:0] window];
     
-    NSRect frame = [view frame];
-    frame.origin = [[view superview] convertPoint:frame.origin toView:[mainWindow contentView]];
-    frame.origin.y += ([[[mainWindow contentView] superview] frame].size.height - [view frame].size.height);
-    frame.origin = [mainWindow convertBaseToScreen:frame.origin];
+    NSRect newFrameRect = [mainWindow frameRectForContentRect:[view frame]];
+    NSRect oldFrameRect = [mainWindow frame];
+    NSSize newSize = newFrameRect.size;
+    NSSize oldSize = oldFrameRect.size;
+    
+    NSRect frame = [mainWindow frame];
+    frame.size = newSize;
+    frame.origin.y -= (newSize.height - oldSize.height);
     
     [mainWindow setContentView:view];
     [mainWindow setFrame:frame display:YES animate:YES];
