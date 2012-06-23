@@ -7,6 +7,7 @@
 //
 
 #import "Document.h"
+#import "MoviePreview.h"
 
 @implementation Document
 
@@ -102,6 +103,29 @@
             return @"tvdb";
             break;
     }
+}
+
+- (IBAction)performSearch:(id)sender {
+    NSString *backend = [self backendName];
+    searchResults = [MoviePreview findByTitle:[sender stringValue] source:backend];
+    [searchResultsTable reloadData];
+}
+
+- (NSInteger)numberOfRowsInTableView:(NSTableView *)tableView {
+    return [searchResults count];
+}
+
+- (id)tableView:(NSTableView *)aTableView objectValueForTableColumn:(NSTableColumn *)col row:(NSInteger)rowIndex {
+    MoviePreview *mp = [searchResults objectAtIndex:rowIndex];
+    NSString *rv;
+    if([[col identifier] isEqual:@"title"]) {
+        rv = [mp title];
+    } else if([[col identifier] isEqual:@"year"]) {
+        rv = [mp year];
+    } else {
+        rv = @"see \u25B8";
+    }
+    return rv;
 }
 
 @end

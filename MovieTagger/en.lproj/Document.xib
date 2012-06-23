@@ -247,6 +247,7 @@
 											</object>
 											<array class="NSMutableArray" key="NSTableColumns">
 												<object class="NSTableColumn" id="692743184">
+													<string key="NSIdentifier">title</string>
 													<double key="NSWidth">341</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
@@ -292,6 +293,7 @@
 													<reference key="NSTableView" ref="28230151"/>
 												</object>
 												<object class="NSTableColumn" id="137419970">
+													<string key="NSIdentifier">year</string>
 													<double key="NSWidth">40</double>
 													<double key="NSMinWidth">40</double>
 													<double key="NSMaxWidth">1000</double>
@@ -317,6 +319,7 @@
 													<reference key="NSTableView" ref="28230151"/>
 												</object>
 												<object class="NSTableColumn" id="937727491">
+													<string key="NSIdentifier">url</string>
 													<double key="NSWidth">48</double>
 													<double key="NSMinWidth">10</double>
 													<double key="NSMaxWidth">3.4028234663852886e+38</double>
@@ -501,6 +504,14 @@
 					<int key="connectionID">100243</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">performSearch:</string>
+						<reference key="source" ref="512844837"/>
+						<reference key="destination" ref="195413663"/>
+					</object>
+					<int key="connectionID">100245</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBOutletConnection" key="connection">
 						<string key="label">delegate</string>
 						<reference key="source" ref="275939982"/>
@@ -515,6 +526,14 @@
 						<reference key="destination" ref="36596673"/>
 					</object>
 					<int key="connectionID">100239</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBOutletConnection" key="connection">
+						<string key="label">dataSource</string>
+						<reference key="source" ref="28230151"/>
+						<reference key="destination" ref="512844837"/>
+					</object>
+					<int key="connectionID">100244</int>
 				</object>
 			</array>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -1059,13 +1078,24 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">100243</int>
+			<int key="maxID">100245</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
 				<object class="IBPartialClassDescription">
 					<string key="className">Document</string>
 					<string key="superclassName">NSDocument</string>
+					<object class="NSMutableDictionary" key="actions">
+						<string key="NS.key.0">performSearch:</string>
+						<string key="NS.object.0">id</string>
+					</object>
+					<object class="NSMutableDictionary" key="actionInfosByName">
+						<string key="NS.key.0">performSearch:</string>
+						<object class="IBActionInfo" key="NS.object.0">
+							<string key="name">performSearch:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="searchField">NSSearchField</string>
 						<string key="searchResultsTable">NSTableView</string>

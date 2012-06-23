@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Document : NSDocument {
+@interface Document : NSDocument <NSTableViewDataSource> {
     NSRegularExpression *regexpClearCharacters;
     NSRegularExpression *regexpClearWhitespaces;
     
@@ -17,6 +17,9 @@
     IBOutlet NSSearchField *searchField;
     IBOutlet NSSegmentedControl *searchType;
     IBOutlet NSTableView *searchResultsTable;
+    NSArray *searchResults;
 }
+
+- (IBAction)performSearch:(id)sender;
 
 @end
