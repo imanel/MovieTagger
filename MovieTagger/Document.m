@@ -139,4 +139,13 @@
     }
 }
 
+- (IBAction)selectMovie:(id)sender {
+    if([searchResultsTable selectedRow] >= 0) {
+        MoviePreview *mp = [searchResults objectAtIndex:[searchResultsTable selectedRow]];
+        movie = [[Movie alloc] initWithExternalID:[mp externalID] source:[mp source]];
+    } else {
+        NSRunInformationalAlertPanel(@"MovieTagger", @"Please select movie first", @"OK", nil, nil);
+    }
+}
+
 @end

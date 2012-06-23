@@ -7,6 +7,7 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "Movie.h"
 
 @interface Document : NSDocument <NSTableViewDataSource> {
     NSRegularExpression *regexpClearCharacters;
@@ -18,9 +19,13 @@
     IBOutlet NSSegmentedControl *searchType;
     IBOutlet NSTableView *searchResultsTable;
     NSArray *searchResults;
+    
+    // Movie View
+    Movie *movie;
 }
 
 - (IBAction)performSearch:(id)sender;
 - (IBAction)tableClicked:(id)sender;
+- (IBAction)selectMovie:(id)sender;
 
 @end
