@@ -200,4 +200,8 @@
     return NO;
 }
 
+- (NSArray *)writableTypesForSaveOperation:(NSSaveOperationType)saveOperation {
+    return [[NSArray alloc] initWithObjects:@"Video", nil];
+}
+
 @end
