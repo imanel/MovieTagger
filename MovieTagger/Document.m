@@ -35,8 +35,10 @@
 
 - (void)windowControllerDidLoadNib:(NSWindowController *)aController {
     [super windowControllerDidLoadNib:aController];
-    [searchField setStringValue:[self guessName]];
-    [self performSearch:NULL];
+    if([self fileURL]) {
+        [searchField setStringValue:[self guessName]];
+        [self performSearch:NULL];
+    }
 }
 
 - (NSData *)dataOfType:(NSString *)typeName error:(NSError **)outError {
@@ -192,6 +194,10 @@
     [super saveToURL:url ofType:typeName forSaveOperation:saveOperation completionHandler:completionHandler];
     [self close];
     NSRunInformationalAlertPanel(@"MovieTagger", @"Information saved", @"OK", nil, nil);
+}
+
+- (BOOL)hasUnautosavedChanges {
+    return NO;
 }
 
 @end
