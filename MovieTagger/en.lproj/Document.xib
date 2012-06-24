@@ -713,7 +713,7 @@
 													<reference key="NSTextColor" ref="108441451"/>
 												</object>
 												<object class="NSTextFieldCell" key="NSDataCell" id="261592782">
-													<int key="NSCellFlags">337772096</int>
+													<int key="NSCellFlags">337772097</int>
 													<int key="NSCellFlags2">2048</int>
 													<string key="NSContents">Text Cell</string>
 													<reference key="NSSupport" ref="1071193415"/>
@@ -723,7 +723,6 @@
 												</object>
 												<int key="NSResizingMask">3</int>
 												<bool key="NSIsResizeable">YES</bool>
-												<bool key="NSIsEditable">YES</bool>
 												<reference key="NSTableView" ref="266567503"/>
 											</object>
 											<object class="NSTableColumn" id="721556083">
@@ -740,7 +739,7 @@
 													<reference key="NSTextColor" ref="108441451"/>
 												</object>
 												<object class="NSTextFieldCell" key="NSDataCell" id="949068368">
-													<int key="NSCellFlags">337772096</int>
+													<int key="NSCellFlags">337772097</int>
 													<int key="NSCellFlags2">2048</int>
 													<string key="NSContents">Text Cell</string>
 													<reference key="NSSupport" ref="1071193415"/>
@@ -750,7 +749,6 @@
 												</object>
 												<int key="NSResizingMask">3</int>
 												<bool key="NSIsResizeable">YES</bool>
-												<bool key="NSIsEditable">YES</bool>
 												<reference key="NSTableView" ref="266567503"/>
 											</object>
 										</array>
@@ -759,9 +757,10 @@
 										<reference key="NSBackgroundColor" ref="65032352"/>
 										<reference key="NSGridColor" ref="2251282"/>
 										<double key="NSRowHeight">17</double>
-										<int key="NSTvFlags">-700448768</int>
+										<int key="NSTvFlags">-155189248</int>
 										<reference key="NSDelegate"/>
 										<reference key="NSDataSource"/>
+										<int key="NSGridStyleMask">1</int>
 										<int key="NSColumnAutoresizingStyle">4</int>
 										<int key="NSDraggingSourceMaskForLocal">15</int>
 										<int key="NSDraggingSourceMaskForNonLocal">0</int>
@@ -843,7 +842,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="889809337">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -869,7 +868,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="260627682">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -890,7 +889,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="251911277">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -912,7 +911,7 @@
 						<string key="NSAntiCompressionPriority">{250, 750}</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="471557656">
-							<int key="NSCellFlags">-1805517311</int>
+							<int key="NSCellFlags">-2073952767</int>
 							<int key="NSCellFlags2">272629760</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -933,7 +932,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="557658206">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -954,7 +953,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="180868190">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -975,7 +974,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="907207213">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
@@ -996,7 +995,7 @@
 						<string key="NSReuseIdentifierKey">_NS:9</string>
 						<bool key="NSEnabled">YES</bool>
 						<object class="NSTextFieldCell" key="NSCell" id="962770087">
-							<int key="NSCellFlags">-1804468671</int>
+							<int key="NSCellFlags">-2072904127</int>
 							<int key="NSCellFlags2">272630784</int>
 							<string key="NSContents"/>
 							<reference key="NSSupport" ref="1071193415"/>
