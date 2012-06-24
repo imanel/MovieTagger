@@ -23,17 +23,49 @@
 }
 
 - (void)loadData {
-    title = @"Batman";
-    genres = @"Crime,Fantasy,Thriller";
-    directors = @"Tim Burton";
-    writers = @"Bob Kane,Sam Hamm";
-    overview = @"The Dark Knight of Gotham City begins his war on crime with his first major enemy being the clownishly homicidal Joker.";
-    released = @"1989-06-23";
-    runtime = @"126";
-    rating = @"7.6";
-    [actors addObject:[[MovieActor alloc] initWithName:@"Michael Keaton" role:@"Batman/Bruce Wayne"]];
-    [actors addObject:[[MovieActor alloc] initWithName:@"Jack Nicholson" role:@"Joker/Jack Napier"]];
-    poster = [[NSURL alloc] initWithString:@"http://ia.media-imdb.com/images/M/MV5BMjExNjMzMTUxNV5BMl5BanBnXkFtZTYwNzQyMTg4._V1_.jpg"];
+    NSDictionary *queryResult = [self dataFromQuery];
+    
+    if(queryResult == NULL) {
+        NSRunInformationalAlertPanel(@"MovieTagger", @"Could not load data. Please try again later.", @"OK", nil, nil);
+    } else {
+        title = [queryResult objectForKey:@"title"];
+        genres = [[queryResult objectForKey:@"genres"] componentsJoinedByString:@","];
+        directors = [[queryResult objectForKey:@"directors"] componentsJoinedByString:@","];
+        writers = [[queryResult objectForKey:@"writers"] componentsJoinedByString:@","];
+        overview = [queryResult objectForKey:@"overview"];
+        released = [queryResult objectForKey:@"release_date"];
+        runtime = [queryResult objectForKey:@"runtime"];
+        rating = [queryResult objectForKey:@"rating"];
+        poster = [[NSURL alloc] initWithString:[[queryResult objectForKey:@"posters"] objectAtIndex:0]];
+        actors = [[NSMutableArray alloc] init];
+        for(NSDictionary *actor in [queryResult objectForKey:@"actors"]) {
+            [actors addObject:[[MovieActor alloc] initWithName:[[actor allKeys] objectAtIndex:0]
+                                                          role:[[actor allValues] objectAtIndex:0]]];
+        }
+    }
+}
+
+- (NSDictionary *)dataFromQuery {
+    NSURL *url = [self urlForQuery];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSData *response = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];
+    NSString *json_string = [[NSString alloc] initWithData:response encoding:NSUTF8StringEncoding];
+    
+    NSError *error = NULL;
+    NSDictionary *result = [NSJSONSerialization JSONObjectWithData:[json_string dataUsingEncoding:NSUTF8StringEncoding] options:0 error:&error];
+    
+    if(error != NULL) {
+        return NULL;
+    } else if(![[result objectForKey:@"status"] isEqual:@"success"]) {
+        return NULL;
+    } else {
+        return [result objectForKey:@"result"];
+    }
+}
+
+- (NSURL *)urlForQuery {
+    NSString *urlString = [[NSString alloc] initWithFormat:@"http://unified-db.heroku.com/api?b=%@&id=%@", source, externalID];
+    return [NSURL URLWithString:urlString];
 }
 
 - (NSString *)escapeForXML:(NSString *)string {
