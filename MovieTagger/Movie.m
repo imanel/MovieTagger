@@ -36,7 +36,8 @@
         released = [queryResult objectForKey:@"release_date"];
         runtime = [queryResult objectForKey:@"runtime"];
         rating = [queryResult objectForKey:@"rating"];
-        poster = [[NSURL alloc] initWithString:[[queryResult objectForKey:@"posters"] objectAtIndex:0]];
+        if([[queryResult objectForKey:@"posters"] count] != 0)
+            poster = [[NSURL alloc] initWithString:[[queryResult objectForKey:@"posters"] objectAtIndex:0]];
         actors = [[NSMutableArray alloc] init];
         for(NSDictionary *actor in [queryResult objectForKey:@"actors"]) {
             [actors addObject:[[MovieActor alloc] initWithName:[[actor allKeys] objectAtIndex:0]
@@ -96,7 +97,8 @@
     [props addObject:[self xmlForKey:@"year" value:[[[self released] componentsSeparatedByString:@"-"] objectAtIndex:0] escape:NO]];
     [props addObject:[self xmlForKey:@"outline" value:[self overview] escape:YES]];
     [props addObject:[self xmlForKey:@"runtime" value:[[NSString alloc] initWithFormat:@"%@min", [self runtime]] escape:NO]];
-    [props addObject:[self xmlForKey:@"thumb" value:[[self poster] absoluteString] escape:NO]];
+    if([[self poster] absoluteString] != NULL)
+        [props addObject:[self xmlForKey:@"thumb" value:[[self poster] absoluteString] escape:NO]];
     [props addObject:[self xmlForKey:@"genre" value:[self genres] escape:YES]];
     [props addObject:[self xmlForKey:@"director" value:[[[self directors] componentsSeparatedByString:@","] objectAtIndex:0] escape:YES]];
     for (id actor in actors) {
@@ -115,7 +117,8 @@
     [props addObject:[self xmlForKey:@"id" value:[self externalID] escape:NO]];
     [props addObject:[self xmlForKey:@"title" value:[self title] escape:YES]];
     [props addObject:[self xmlForKey:@"plot" value:[self overview] escape:YES]];
-    [props addObject:[self xmlForKey:@"thumb" value:[[self poster] absoluteString] escape:NO]];
+    if([[self poster] absoluteString] != NULL)
+        [props addObject:[self xmlForKey:@"thumb" value:[[self poster] absoluteString] escape:NO]];
     [props addObject:[self xmlForKey:@"genre" value:[self genres] escape:YES]];
     for (id actor in actors) {
         NSMutableArray *actorProps = [[NSMutableArray alloc] init];
