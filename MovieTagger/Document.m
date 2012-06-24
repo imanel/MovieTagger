@@ -220,4 +220,9 @@
     return [[NSArray alloc] initWithObjects:@"Video", nil];
 }
 
+- (void)close {
+    [super close];
+    [[NSDocumentController sharedDocumentController] clearRecentDocuments:self];
+}
+
 @end
