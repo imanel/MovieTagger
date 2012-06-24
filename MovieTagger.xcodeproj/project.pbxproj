@@ -35,6 +35,7 @@
 		592E5A5A1595F9CF002FFF5C /* MoviePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MoviePreview.m; sourceTree = "<group>"; };
 		592E5A5C159603FF002FFF5C /* Movie.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Movie.h; sourceTree = "<group>"; };
 		592E5A5D159603FF002FFF5C /* Movie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Movie.m; sourceTree = "<group>"; };
+		59ADD92B1597450D00AF72FF /* MovieTagger.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = MovieTagger.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 		592E5A391595D6FB002FFF5C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				59ADD92B1597450D00AF72FF /* MovieTagger.entitlements */,
 				592E5A3A1595D6FB002FFF5C /* MovieTagger-Info.plist */,
 				592E5A3B1595D6FB002FFF5C /* InfoPlist.strings */,
 				592E5A3E1595D6FB002FFF5C /* main.m */,
@@ -287,10 +289,13 @@
 		592E5A501595D6FB002FFF5C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MovieTagger/MovieTagger.entitlements;
+				CODE_SIGN_IDENTITY = "My Test Certificate";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MovieTagger/MovieTagger-Prefix.pch";
 				INFOPLIST_FILE = "MovieTagger/MovieTagger-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -298,10 +303,13 @@
 		592E5A511595D6FB002FFF5C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = MovieTagger/MovieTagger.entitlements;
+				CODE_SIGN_IDENTITY = "My Test Certificate";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MovieTagger/MovieTagger-Prefix.pch";
 				INFOPLIST_FILE = "MovieTagger/MovieTagger-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
