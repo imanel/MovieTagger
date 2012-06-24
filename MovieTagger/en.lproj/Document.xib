@@ -132,6 +132,7 @@
 									<int key="NSPeriodicInterval">75</int>
 								</object>
 								<int key="NSMaximumRecents">255</int>
+								<bool key="NSSendsWholeSearchString">YES</bool>
 							</object>
 						</object>
 						<object class="NSButton" id="36596673">
