@@ -177,6 +177,22 @@
 
 - (IBAction)cancelSelection:(id)sender {
     [self setCurrentView:searchView];
+    [self clearSelection];
+}
+
+- (void)clearSelection {
+    [movieTitle setStringValue:@""];
+    [movieGenres setStringValue:@""];
+    [movieDirectors setStringValue:@""];
+    [movieWriters setStringValue:@""];
+    [movieOverview setStringValue:@""];
+    [movieReleased setStringValue:@""];
+    [movieRuntime setStringValue:@""];
+    [movieRating setStringValue:@""];
+    movieActorsList = [[NSArray alloc] init];
+    [movieActors reloadData];
+    NSImage *poster = [[NSImage alloc] init];
+    [moviePoster setImage:poster];
 }
 
 - (BOOL)prepareSavePanel:(NSSavePanel *)savePanel {
